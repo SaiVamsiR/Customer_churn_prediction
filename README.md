@@ -1,122 +1,45 @@
-# 📉 Customer Churn Prediction using Logistic Regression
+# Customer Churn Prediction Using Logistic Regression
 
-This project applies a **Logistic Regression** model to predict **customer churn** based on behavioral, demographic, and account-related data. It includes data cleaning, preprocessing, exploratory data analysis, model training, and evaluation.
+## Overview
+This repository contains a machine learning project that predicts customer churn using **logistic regression**. Churn prediction helps businesses identify at-risk customers and take proactive measures to retain them.
 
----
+## Dataset
+The dataset used for this project includes customer information such as:
+- **Demographic data** (age, gender, location)
+- **Account details** (tenure, subscription plan)
+- **Usage behavior** (monthly charges, total spend)
+- **Customer support interaction** (number of complaints, resolution time)
 
-## 🧠 Objective
-
-The goal is to build a predictive model that can help companies **identify customers likely to churn** so they can take preventative action.
-
----
-
-## 📁 Repository Structure
-
-customer-churn-logreg/
-│
-├── data/
-│ └── customer_churn.csv # Raw input dataset
-│
-├── notebooks/
-│ └── churn_eda_modeling.ipynb # Data analysis & model building
-│
-├── model/
-│ └── churn_model.pkl # Saved trained logistic model
-│
-├── utils/
-│ └── preprocess.py # Data preprocessing functions
-│
-├── train_model.py # Script to train logistic model
-├── requirements.txt # Python package requirements
-└── README.md # Project documentation
-
-markdown
-Copy
-Edit
-
----
-
-## 🧾 Dataset Details
-
-- **Source:** Telco Customer Churn Dataset (e.g. from Kaggle)
-- **Rows:** ~7,000 records
-- **Target:** `Churn` (Yes = customer left, No = customer stayed)
-- **Features:**
-  - Demographics: `gender`, `SeniorCitizen`, `Partner`, `Dependents`
-  - Account info: `tenure`, `Contract`, `MonthlyCharges`, `TotalCharges`
-  - Services: `PhoneService`, `InternetService`, `TechSupport`, etc.
-
----
-
-## 🔧 Setup Instructions
-
-### 1. Clone the Repository
+## Dependencies
+To run this project, install the required dependencies:
 
 ```bash
-git clone https://github.com/your-username/customer-churn-logreg.git
-cd customer-churn-logreg
-2. Set Up Virtual Environment (Optional but Recommended)
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate         # Windows: venv\Scripts\activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-⚙️ Training the Model
-Run the model training script:
+pip install pandas numpy scikit-learn matplotlib seaborn
+```
 
-bash
-Copy
-Edit
-python train_model.py
-This will:
+## Model Training
+The logistic regression model is built using **scikit-learn** and follows these key steps:
+1. **Data Preprocessing** – Handling missing values, encoding categorical variables, and scaling numerical features.
+2. **Feature Selection** – Selecting relevant features for better prediction accuracy.
+3. **Model Training** – Using logistic regression to classify customers as likely to churn or not.
+4. **Evaluation Metrics** – Assessing performance using accuracy, precision, recall, and F1-score.
 
-Preprocess the data
 
-Train a logistic regression model
 
-Save the trained model as model/churn_model.pkl
+## Results
+The trained model provides predictions with insights into the most influential factors affecting churn. The output includes:
+- **Confusion Matrix**
+- **ROC Curve**
+- **Feature Importance Analysis**
 
-📈 Model Evaluation
-After training, the following metrics are calculated:
+## Future Improvements
+Potential enhancements include:
+- Hyperparameter tuning for optimization
+- Exploring alternative classification algorithms
+- Implementing real-time customer monitoring
 
-Accuracy
+## Contributing
+Feel free to fork the repository and submit pull requests with improvements.
 
-Confusion Matrix
-
-Precision / Recall / F1 Score
-
-ROC-AUC Curve
-
-🔍 Highlights
-End-to-end pipeline for binary classification
-
-Clean preprocessing and modular code
-
-Logistic Regression with hyperparameter tuning
-
-Easy to extend with other ML models (e.g., Random Forest, XGBoost)
-
-📊 Tools & Libraries Used
-Python 3.9+
-
-Pandas, NumPy
-
-Scikit-learn
-
-Matplotlib, Seaborn
-
-Joblib (for model persistence)
-
-🚀 Future Enhancements
-Try other ML models like Random Forest, XGBoost
-
-Feature selection and regularization
-
-Use SMOTE to handle class imbalance
-
-Add unit tests and logging
+## License
+This project is licensed under the MIT License.
