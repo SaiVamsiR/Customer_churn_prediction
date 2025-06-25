@@ -7,7 +7,7 @@ This repository contains a machine learning project that predicts **customer chu
 ## 📊 Dataset
 The dataset includes customer details such as:
 - 🏷 **Demographics** (age, gender, location)
-- 📜 **Account Details** (tenure, subscription plan)
+- 📜 **Account Details** (tenure, subscription plan) 
 - 📈 **Usage Behavior** (monthly charges, total spend)
 - 🆘 **Customer Support** (complaints, resolution time)
 
